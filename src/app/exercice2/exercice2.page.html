@@ -3,6 +3,20 @@
     <ion-buttons slot="start">
       <ion-menu-button color="tertiary"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Binding 2 ways</ion-title>
+    <ion-title>Exercice 2</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">ingrédients</ion-label>
+    <ion-input [(ngModel)]="variable"></ion-input>
+    <ion-button (click)="add()" slot="end">+</ion-button>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let item of list">
+      {{item}}
+    </ion-item>
+  </ion-list>
+</ion-content>

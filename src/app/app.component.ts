@@ -40,6 +40,11 @@ export class AppComponent {
     title:'Binding 2 Ways',
     icon: 'wine',
     url: '/exemple5'
+  },
+  {
+    title:'Exercice2',
+    icon:'flame',
+    url: '/exercice2'
   }
 
   ];
