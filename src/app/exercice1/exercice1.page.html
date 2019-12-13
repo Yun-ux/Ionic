@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Chronometre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-img src="./assets/img/okita.jpg"></ion-img>
+  <p>{{ nombre }}</p>
+  <ion-button (click)="start()" [disabled]="started" color="tertiary"
+    >Start</ion-button
+  >
+  <ion-button (click)="stop()" [disabled]="!started" color="danger"
+    >Stop</ion-button
+  >
+  <ion-button (click)="reset()" [disabled]="nombre == 0" color="warning"
+    >Reset</ion-button
+  >
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Binding 2 ways</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">value</ion-label>
+    <ion-input [(ngModel)]="variable"></ion-input>
+  </ion-item>
+  <ion-item>
+    {{ variable}}
+  </ion-item>
+</ion-content>
