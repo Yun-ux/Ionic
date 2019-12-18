@@ -35,6 +35,14 @@ const routes: Routes = [
     path: 'exercice2',
     loadChildren: () => import('./exercice2/exercice2.module').then( m => m.Exercice2PageModule)
   },
+  {
+    path: 'api',
+    loadChildren: () => import('./Ajax/api/api.module').then( m => m.ApiPageModule)
+  },
+  {
+    path: 'pokedex',
+    loadChildren: () => import('./pokedex/pokedex.module').then( m => m.PokedexPageModule)
+  },
   
 ];
 

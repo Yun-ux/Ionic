@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pokedex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="previous()">Previous</ion-button>
+  <ion-button (click)="next()">Next</ion-button>
+  <ion-list *ngFor="let elem of pokemon?.results">
+    <ion-list-header (click)="presentModal(elem.url)"
+      >{{elem.name}}</ion-list-header
+    >
+  </ion-list>
+</ion-content>
