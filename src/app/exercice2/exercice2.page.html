@@ -11,12 +11,25 @@
   <ion-item>
     <ion-label position="floating">ingrédients</ion-label>
     <ion-input [(ngModel)]="variable"></ion-input>
-    <ion-button (click)="add()" slot="end">+</ion-button>
+    <ion-button
+      (click)="add()"
+      size="block"
+      slot="end"
+      [disabled]="!variable"
+      color="tertiary"
+      >+</ion-button
+    >
   </ion-item>
-
   <ion-list>
-    <ion-item *ngFor="let item of list">
-      {{item}}
+    <ion-item
+      *ngFor="let item of list"
+      (click)="cocher(item)"
+      [ngClass]="{'barre': item.isChecked }"
+    >
+      <ion-button slot="end" (click)="showAlert(item)" color="tertiary">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+      {{item.name}}
     </ion-item>
   </ion-list>
 </ion-content>
