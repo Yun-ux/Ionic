@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetailsPage } from './pokedex/pokemon-details/pokemon-details.page';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [AppComponent, PokemonDetailsPage],
@@ -18,7 +19,8 @@ import { PokemonDetailsPage } from './pokedex/pokemon-details/pokemon-details.pa
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [
     StatusBar,

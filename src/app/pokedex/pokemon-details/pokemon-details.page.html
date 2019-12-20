@@ -1,10 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
-      <ion-button (click)="previous()"><-</ion-button>
+      <ion-button (click)="dismiss()"
+        ><ion-icon name="close"></ion-icon
+      ></ion-button>
     </ion-buttons>
-    <ion-title>pokemonDetails</ion-title>
+    <ion-title color="tertiary">Pokemon Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-header>{{model?.name}}</ion-card-header>
+    <img src="{{model?.sprites.front_default}}" />
+    <img src="{{model?.sprites.back_default}}" />
+    <div style="display: block">
+      <canvas
+        baseChart
+        [datasets]="radarChartData"
+        [options]="radarChartOptions"
+        [labels]="radarChartLabels"
+        [chartType]="radarChartType"
+      >
+      </canvas>
+    </div>
+    <!-- <h2 class="stats" *ngFor=" let j of model?.types">{{ j.type.name}}</h2>
+    <ion-card-content *ngFor="let i of model?.stats"
+      >{{i.stat.name}} : {{i.base_stat}}</ion-card-content
+    > -->
+  </ion-card>
+</ion-content>

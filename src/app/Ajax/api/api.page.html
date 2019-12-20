@@ -13,8 +13,8 @@
   <ion-card *ngIf="weather">
     <ion-header>{{ weather.name}}</ion-header>
     <ion-card-content>
-      <p>Temp: Min {{weather.main.temp_min}} °K</p>
-      <p>Temp: Max {{weather.main.temp_max}} °K</p>
+      <p>Temp: Min {{weather.main.temp_min -273.15 | number: '1.0-0'}} °C</p>
+      <p>Temp: Max {{weather.main.temp_max -273.15 | number: '1.0-0'}} °C</p>
       <p>Pressure: {{ weather.main.pressure}}</p>
       <img
         src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}.png"

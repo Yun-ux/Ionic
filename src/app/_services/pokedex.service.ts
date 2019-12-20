@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Result, PokedexData } from '../_models/pokedex';
+import { PokemonDetailsRequest } from '../_models/pokemon-details';
 
 
 @Injectable({
@@ -24,5 +25,11 @@ export class PokedexService {
     return this.HttpClient
     .get<PokedexData>(url)
     .toPromise();
+  }
+
+  getDetails(url:string) {
+    return this.HttpClient
+    .get<PokemonDetailsRequest>(url)
+    .toPromise()
   }
 }
