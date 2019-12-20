@@ -56,6 +56,11 @@ export class AppComponent {
     title:'Pokedex',
     icon:'flask',
     url:'/pokedex'
+  },
+  {
+    title:'Camera',
+    icon:'camera',
+    url:'/camera'
   }
 
   ];
